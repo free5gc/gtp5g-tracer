@@ -19,8 +19,10 @@ func main() {
 	}
 
 	var progNameList = []string{
-		"gtp5g_encap_recv",
-		"gtp5g_xmit_skb_ipv4",
+		"gtp5g_encap_recv_entry",
+		"gtp5g_encap_recv_exit",
+		"gtp5g_xmit_skb_ipv4_entry",
+		"gtp5g_xmit_skb_ipv4_exit",
 	}
 
 	for _, progName := range progNameList {
