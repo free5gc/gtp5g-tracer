@@ -1,0 +1,7 @@
+*.o
+*.ll
+.vscode
+libbpf
+main
+vmlinux/vmlinux.h
+output
