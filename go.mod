@@ -1,4 +1,4 @@
-module github.com/ENSREG/tinyLB
+module github.com/free5gc/gtp5g-tracer
 
 go 1.22.6
 

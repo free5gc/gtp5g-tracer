@@ -103,7 +103,8 @@ int BPF_PROG(gtp5g_encap_recv_entry, struct sock *sk, struct sk_buff *skb)
         bpf_printk("fentry/gtp5g_encap_recv: skb is NULL");
     }
 
-    bpf_printk("fentry/gtp5g_encap_recv: PID=%u, TGID=%u, CPU=%u, LEN=%u", pid, tgid, cpu, skb_len);
+    bpf_printk("fentry/gtp5g_encap_recv: PID=%u, TGID=%u, CPU=%u", pid, tgid, cpu);
+    bpf_printk("fentry/gtp5g_encap_recv: LEN=%u", skb_len);
     return 0;
 }
 

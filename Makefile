@@ -37,6 +37,7 @@ libbpf: $(LIBBPF_SRC) $(wildcard $(LIBBPF_SRC)/*.[ch])
 	$(eval STATIC=-extldflags -static)
 
 btf:
+	mkdir -p vmlinux
 	bpftool btf dump file /sys/kernel/btf/gtp5g format c > vmlinux/vmlinux.h
 
 user: $(USER_TARGET)
@@ -62,7 +63,7 @@ $(BPF_OBJ): %.o: %.c
 dep:
 	git clone https://github.com/libbpf/libbpf.git && \
 	cd libbpf && \
-	git checkout 8bdc267 && \
+	git checkout v1.4.0 && \
 	cd src && \
 	make
 
